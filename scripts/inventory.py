@@ -9,8 +9,9 @@ def create_inventory(items: list) -> dict:
 
 def add_items(inventory: dict, items: list) -> dict:
     """
-    Takes an inventory containing value pairs of items and their quantities
-    and a list items to be added to the inventory to be added to the inventory
+    Takes an inventory containing value pairs of items and their 
+    quantities and a list items to be added to the inventory to be 
+    added to the inventory
     Returns the updated invetory
     """
     for item in items:
