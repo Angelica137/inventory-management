@@ -10,3 +10,10 @@ def test_add_items():
     inventory = {"coal": 1}
     items = ["wood", "iron", "coal", "wood"]
     assert add_items(inventory, items) == {"coal": 2, "wood": 2, "iron": 1}
+
+
+def test_decrement_items():
+    inventory = {"coal": 3, "diamond": 1, "iron": 5}
+    items = ["diamond", "coal", "iron", "iron"]
+    assert decrement_items(inventory, items) == {
+        "coal": 2, "diamond": 0, "iron": 3}
