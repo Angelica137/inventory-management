@@ -17,3 +17,10 @@ def test_decrement_items():
     items = ["diamond", "coal", "iron", "iron"]
     assert decrement_items(inventory, items) == {
         "coal": 2, "diamond": 0, "iron": 3}
+
+
+def test_decrement_items_0_count():
+    inventory = {"coal": 3, "diamond": 0, "iron": 5}
+    items = ["diamond", "coal", "iron", "iron"]
+    assert decrement_items(inventory, items) == {
+        "coal": 2, "diamond": 0, "iron": 3}
