@@ -33,3 +33,15 @@ def decrement_items(inventory: dict, items: list) -> dict:
         if item in inventory and inventory[item] > 0:
             inventory[item] -= 1
     return inventory
+
+
+def remove_item(inventory: dict, item: str) -> dict:
+    """
+    Takes an invetory containig key-value pairs of items and their quantities
+    and the name of an item.
+    Removes the item and all its quantites from the inventory and
+    returns the updates inventory
+    """
+    if item in inventory:
+        inventory.pop(item)
+    return inventory
