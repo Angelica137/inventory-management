@@ -40,4 +40,4 @@ def test_remove_item_item_not_in_list():
 def test_list_inventory():
     inventory = {"coal": 7, "wood": 11, "diamond": 2, "iron": 7, "silver": 0}
     assert list_inventory(inventory) == [
-        ('coal', 7), ('diamond', 2), ('iron', 7), ('wood', 11)]
+        ('coal', 7), ('wood', 11), ('diamond', 2), ('iron', 7)]

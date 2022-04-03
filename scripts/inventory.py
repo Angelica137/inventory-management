@@ -45,3 +45,20 @@ def remove_item(inventory: dict, item: str) -> dict:
     if item in inventory:
         inventory.pop(item)
     return inventory
+
+
+def list_inventory(inventory: dict) -> list:
+    """
+    Takes an invetory containing kay-value pairs of items and their quantites
+    Returns a list of tuples with the item name and its quantity containing 
+    those items with quantities greater than zero only
+    """
+    items_in_stock = []
+    for item in inventory:
+        if inventory[item] > 0:
+            items_in_stock.append((item, inventory[item]))
+    return items_in_stock
+
+
+inventory = {"coal": 7, "wood": 11, "diamond": 2, "iron": 7, "silver": 0}
+print(list_inventory(inventory))
