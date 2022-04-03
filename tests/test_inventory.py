@@ -24,3 +24,8 @@ def test_decrement_items_0_count():
     items = ["diamond", "coal", "iron", "iron"]
     assert decrement_items(inventory, items) == {
         "coal": 2, "diamond": 0, "iron": 3}
+
+
+def test_remove_item():
+    inventory = {"coal": 2, "wood": 1, "diamond": 2}
+    assert remove_item(inventory, "coal") == {"wood": 1, "diamond": 2}
