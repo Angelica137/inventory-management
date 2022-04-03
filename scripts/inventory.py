@@ -58,7 +58,3 @@ def list_inventory(inventory: dict) -> list:
         if inventory[item] > 0:
             items_in_stock.append((item, inventory[item]))
     return items_in_stock
-
-
-inventory = {"coal": 7, "wood": 11, "diamond": 2, "iron": 7, "silver": 0}
-print(list_inventory(inventory))
