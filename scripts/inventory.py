@@ -42,8 +42,7 @@ def remove_item(inventory: dict, item: str) -> dict:
     Removes the item and all its quantites from the inventory and
     returns the updates inventory
     """
-    if item in inventory:
-        inventory.pop(item)
+    inventory.pop(item, None)
     return inventory
 
 
