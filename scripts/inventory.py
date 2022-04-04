@@ -14,8 +14,8 @@ def add_items(inventory: dict, items: list) -> dict:
     added to the inventory
     Returns the updated invetory
     """
-    for item in items:
-        if item in inventory:
+    for item in items:  # O(n)
+        if item in inventory:  # O(1)
             inventory[item] += 1
         else:
             inventory[item] = 1
@@ -53,8 +53,4 @@ def list_inventory(inventory: dict) -> list:
     Returns a list of tuples with the item name and its quantity containing 
     those items with quantities greater than zero only
     """
-    items_in_stock = []
-    for item in inventory:
-        if inventory[item] > 0:
-            items_in_stock.append((item, inventory[item]))
-    return items_in_stock
+    return [item for item in list(inventory.items()) if item[1] > 0]
