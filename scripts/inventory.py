@@ -30,7 +30,7 @@ def decrement_items(inventory: dict, items: list) -> dict:
     Returns the updated inventory
     """
     for item in items:
-        if item in inventory and inventory[item] > 0:
+        if inventory[item] > 0:
             inventory[item] -= 1
     return inventory
 
